@@ -144,6 +144,7 @@ nav ul li a {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+
 }
 
 .projeto {
@@ -168,6 +169,16 @@ nav ul li a {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.container-projetos {
+    display: flex; /* Habilita o Flexbox */
+    flex-wrap: wrap; /* Permite que os cards pulem para a próxima linha */
+    justify-content: center; /* Centraliza os cards na linha horizontalmente */
+    align-items: flex-start; /* Alinha os itens pelo topo (caso tenham alturas diferentes) */
+    gap: 20px; /* Adiciona espaçamento entre os cards (opcional, mas recomendado) */
+    max-width: 1400px; /* Limite a largura máxima do contêiner principal para centralizar tudo */
+    margin: 0 auto; /* Centraliza o contêiner principal na página */
 }
 
 /* Botão WhatsApp */

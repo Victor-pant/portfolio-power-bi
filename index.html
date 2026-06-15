@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Victor Oliveira</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        /* Container principal combinando Botão + Ícones */
+        .cv-skills-container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        
+        /* Faixa suave para envelopar e dar contraste aos logotipos */
+        .tech-icons-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(0, 0, 0, 0.05); /* Fundo sutil */
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+        
+        /* Padronização rígida de tamanho e alinhamento para TODOS os ícones */
+        .tech-icons-wrapper img, .tech-icons-wrapper i {
+            font-size: 26px; /* Tamanho base unificado */
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: contain; /* Garante que imagens SVG não distorçam */
+            transition: transform 0.2s;
+            color: inherit; /* Respeita a cor do tema se necessário */
+        }
+        
+        /* Efeito sutil ao passar o mouse */
+        .tech-icons-wrapper img:hover, .tech-icons-wrapper i:hover {
+            transform: scale(1.15);
+        }
+        
+        /* Forçar contraste escura no ícone do Flask (que é nativamente claro) */
+        .devicon-flask-original {
+            color: #1e293b !important; 
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Portfólio de Projetos<img src="imagens/grafico.png" alt="Ícone de gráfico"></h1>
+
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <div class="fotoperfil">
+                <img src="imagens/perfil1.png" alt="Foto de perfil de Victor Oliveira">
+            </div>
+            <div class="descricao">
+                <h1>Victor Oliveira</h1>
+                <h3>Especialista em Análise de Dados e Business Intelligence</h3>
+                <p>Minha trajetória combina a <b>visão estratégica da Administração</b> com a <b>precisão da tecnologia</b>. Com sólida experiência como <b>Supervisor de Polos EAD na Unoeste</b>, desenvolvi uma forte cultura de <b>gestão e liderança</b>. Hoje, essa vivência é o pilar que sustenta meu trabalho como <b>desenvolvedor de soluções de dados</b>.</p>
+                <p>Atualmente, curso <b>Tecnologia da Informação na Univesp</b>, onde aplico <b>Python, Power BI e conhecimentos fundamentais em SQL</b> para transformar dados brutos em <b>inteligência para a tomada de decisão</b>. Acredito que a tecnologia é a melhor ferramenta para otimizar processos e criar valor real.</p>
+                <p><b>Conheça alguns dos meus trabalhos!</b></p>
+                
+                <div class="cv-skills-container">
+                    <a href="docs/CVVictor.pdf" class="btn" target="_blank" rel="noopener">Download CV</a>
+                    <div class="tech-icons-wrapper" title="Principais Tecnologias">
+                        
+                        <i class="devicon-python-plain colored" title="Python"></i>
+                        <i class="devicon-microsoftsqlserver-plain colored" title="SQL Server"></i>
+                        <i class="devicon-html5-plain colored" title="HTML5"></i>
+                        <i class="devicon-css3-plain colored" title="CSS3"></i>
+                        <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                        <i class="devicon-flask-original" title="Flask"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="powerbi">
+            <div class="background">
+                <div class="caixa-info">
+                    <h2>Minha Jornada em Análise de Dados</h2>
+                    <p>Com o conhecimento que adquiri na faculdade e nos cursos do <b>Senai de Presidente Prudente</b>, desenvolvi habilidades para atuar com <b>análise de dados, Business Intelligence e programação</b>.</p>
+                    <p>Realizei diversos projetos que aliam teoria e prática, criando soluções de Business Intelligence, automações e análises aplicadas ao negócio. Minha experiência inclui a criação de <b>dashboards interativos em Power BI</b> e projetos de <b>ETL com Python e SQL Server</b>.</p>
+
+                    <h3>Conheça alguns dos meus projetos</h3>
+                    <button class="scroll-btn" type="button" onclick="scrollToPortfolio()" aria-label="Ir para a seção de portfólio">
+                        <img src="imagens/setabaixo1.png" alt="Seta para baixo">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Meus Projetos</h2>
+            <h3 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Esse portfólio está em desenvolvimento...</h3>
+            <p>Todos os dados e informações apresentados são ilustrativos e foram utilizados apenas para fins de demonstração, preservando a confidencialidade e integridade dos dados reais das empresas. Os projetos refletem aplicações práticas em análise de dados, Business Intelligence, automações e desenvolvimento de soluções.</p>
+            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Use as abas abaixo para navegar pelos projetos por área de atuação.</h4>
+
+            <div class="portfolio-tabs" role="tablist" aria-label="Categorias de projetos">
+                <button class="tab-btn active" type="button" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+                <button class="tab-btn" type="button" data-filter="powerbi" role="tab" aria-selected="false">Power BI</button>
+                <button class="tab-btn" type="button" data-filter="web" role="tab" aria-selected="false">Desenvolvimento Web</button>
+                <button class="tab-btn" type="button" data-filter="dados" role="tab" aria-selected="false">Engenharia & Banco de Dados</button>
+            </div>
+
+            <section class="container-projetos" aria-live="polite">
+                
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/ecommerce.JPG" alt="Dashboard de e-commerce">
+                    <span class="project-tag">Power BI</span>
+                    <h3>E-commerce</h3>
+                    <p>Dashboard com indicadores de vendas online, produtos, quantidades de pedidos, faturamento e clientes.</p>
+                    <a href="https://drive.google.com/file/d/1GlFRLq-lHkfpLrDvbLONfeZMJUAJ0TRB/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/logistica.png" alt="Dashboard de logística">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Logística</h3>
+                    <p>Indicadores de entregas, prazos, custos, faturamento por clientes, região, pedidos e volumes.</p>
+                    <a href="https://drive.google.com/file/d/1CnMSfpDbN_NSSJ6JQAcw_807p72Khn4J/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/RH.png" alt="Dashboard de recursos humanos">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Recursos Humanos</h3>
+                    <p>Principais indicadores de colaboradores, salários, faltas, contratações, demissões, filiais e departamentos.</p>
+                    <a href="https://drive.google.com/file/d/1aYtI_m17qZqe-aAqzfY7dnAEv_-w8PmO/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/veiculos.JPG" alt="Dashboard de locadora de veículos">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Locadora de Veículos</h3>
+                    <p>Dashboard com indicadores de locações, tipos de veículos, número de reservas, faturamento e perfil dos clientes.</p>
+                    <a href="https://drive.google.com/drive/folders/1L78OkM3uOeZumEiinlj-S1uz6nCcykLh?usp=drive_link" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/graduacao.JPG" alt="Dashboard comercial de graduação">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Comercial Universidade</h3>
+                    <p>Dashboard com indicadores de inscrições, matrículas, conversão, comparativo de unidades e região.</p>
+                    <a href="https://drive.google.com/file/d/1aKJDvupWPwSSDv89e3NsmJZeViHNWX8Q/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/posgraduacao.JPG" alt="Dashboard comercial de pós-graduação">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Comercial Pós-Graduação</h3>
+                    <p>Dashboard com indicadores de inscrições, matrículas, conversão, comparativo de cursos e vendedores.</p>
+                    <a href="https://drive.google.com/file/d/1Lzqxnck0_SgxPRWsH2Md94SA9bFt4Lr3/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi dados">
+                    <img src="imagens/mercadoedu.JPG" alt="Dashboard de dados educacionais">
+                    <span class="project-tag">Power BI + Dados</span>
+                    <h3>Dados Educacionais</h3>
+                    <p>Dashboard com indicadores de alunos do ensino superior por cidade, matrículas, evasão e outras informações estratégicas.</p>
+                    <a href="https://drive.google.com/file/d/1V-tprd0tKLNjOfTDPiQE25iNCdj93Jvj/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/controlevenda.png" alt="Dashboard de controle de vendas">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Controle de Vendas</h3>
+                    <p>Dashboard com indicadores por vendedores, relatórios de faturamento, formas de pagamento e filtros avançados.</p>
+                    <a href="https://drive.google.com/file/d/1TzQjdqSe0XAk1i2iY9v4bas5UMiwqVZL/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi">
+                    <img src="imagens/Universidade.jpg" alt="Dashboard universitário">
+                    <span class="project-tag">Power BI</span>
+                    <h3>Universidade</h3>
+                    <p>Dashboard com indicadores de faturamento, dados de alunos e gráficos comparativos entre campus e cursos.</p>
+                    <a href="https://drive.google.com/drive/folders/13PpIAZBdw1duW5rX9C3cIEbjb4fgSRvP" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi dados">
+                    <img src="imagens/Eventos.jpg" alt="Dashboard analítico de eventos">
+                    <span class="project-tag">Power BI + SQL</span>
+                    <h3>Performance e Faturamento de Eventos</h3>
+                    <p>Solução de BI para gestão de eventos, abrangendo estruturação e tratamento de dados no <b>SQL Server</b> e visualização analítica no Power BI.</p>
+                    <a href="https://drive.google.com/drive/folders/1Ijqo9CF65j9uz2HLcpy5iHO76Y6lb1BT?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="powerbi dados">
+                    <img src="imagens/financeiro_polo.jpg" alt="Dashboard financeiro para gestão educacional">
+                    <span class="project-tag">Power BI + ETL</span>
+                    <h3>Gestão e Análise de Custos Educacionais</h3>
+                    <p>Solução de BI para análise financeira, com extração de dados, tratamento, modelagem em <b>SQL Server</b> e construção de dashboards no Power BI.</p>
+                    <a href="https://drive.google.com/file/d/1AoBdaqs7-JHFB-KFR9iP36pUUqA3dUtG/view?usp=sharing" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="web">
+                    <img src="imagens/edusenai.jpg" alt="Sistema EduSenai">
+                    <span class="project-tag">Python + Flask + JS</span>
+                    <h3>EduSenai — Gestão Escolar</h3>
+                    <p>Sistema escolar estruturado com API RESTful distribuída, autenticação, controle de CRUD completo para entidades acadêmicas e banco SQLite.</p>
+                    <a href="https://edusenai-frontend.onrender.com" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="web">
+                    <img src="imagens/sistemautilitarios.jpg" alt="Sistema de Utilitários Python">
+                    <span class="project-tag">Python + Flask + APIs</span>
+                    <h3>Sistema de Utilitários e APIs</h3>
+                    <p>Aplicação em Flask integrada com Bootstrap 5. Reúne ferramentas de cálculo operacional e consumo de APIs externas (ViaCEP, OpenWeather e cotações).</p>
+                    <a href="https://seu-link-sistema.onrender.com" target="_blank" rel="noopener">Acessar</a>
+                </article>
+
+                <article class="projeto" data-categories="dados">
+                    <img src="imagens/QuerysSQL.jpg" alt="Consultas SQL e automações de dados">
+                    <span class="project-tag">SQL + Python</span>
+                    <h3>Scripts SQL, ETL e Automações</h3>
+                    <p>Área para documentação de consultas SQL Server, processos ETL com Python/Pandas e automações voltadas à análise e preparação de dados.</p>
+                    <a href="https://github.com/Victor-pant" target="_blank" rel="noopener">Acessar GitHub</a>
+                </article>
+            </section>
+
+            <p class="empty-state" hidden>Nenhum projeto cadastrado nesta categoria ainda. Quando houver novos projetos, basta adicionar um card com a categoria correspondente.</p>
+
+            <a class="whatsapp-link" href="https://wa.me/5518997165105" target="_blank" rel="noopener">Entre em contato pelo WhatsApp</a>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Comigo!</h2>
+            <p>Este portfólio foi preparado para o GitHub Pages, portanto não utiliza backend nem formulário com armazenamento de dados. Para contato profissional, utilize um dos canais abaixo.</p>
+            <div class="contato-links">
+                <a href="mailto:victor1301@outlook.com">Enviar e-mail</a>
+                <a href="https://wa.me/5518997165105" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://linkedin.com/in/victor-oliveira-2b1048113" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/Victor-pant" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Telefone: (18) 99716-5105 | Email: victor1301@outlook.com</p>
+        <a href="https://linkedin.com/in/victor-oliveira-2b1048113" target="_blank" rel="noopener">
+            <p>Me siga no Linkedin<img src="imagens/linkedin.png" alt="Ícone do LinkedIn"></p>
+        </a>
+        <a href="https://github.com/Victor-pant" target="_blank" rel="noopener">
+            <p>Github - Victor-pant<img src="imagens/github.png" alt="Ícone do GitHub"></p>
+        </a>
+        <p>&copy; 2026 Desenvolvido por Victor Oliveira.</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
